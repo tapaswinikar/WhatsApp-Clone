@@ -1,0 +1,639 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Roboto',sans-serif;
+    background:#0b141a;
+    color:#e9edef;
+    overflow:hidden;
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.container{
+    display:flex;
+    width:100vw;
+    height:100vh;
+}
+
+/* ===========================
+   LEFT SIDEBAR
+=========================== */
+
+.sidebar{
+    width:72px;
+    background:#202c33;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-right:1px solid #313d45;
+}
+
+.sidebar-top,
+.sidebar-bottom{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+}
+
+.nav-icon{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#aebac1;
+    cursor:pointer;
+    transition:.3s;
+    font-size:22px;
+}
+
+.nav-icon:hover{
+    background:#2a3942;
+    color:#fff;
+}
+
+.nav-icon.active{
+    background:#2a3942;
+    color:#00a884;
+}
+
+.profile img{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* ===========================
+   CHAT LIST PANEL
+=========================== */
+
+.chat-list{
+    width:420px;
+    background:#111b21;
+    display:flex;
+    flex-direction:column;
+    border-right:1px solid #313d45;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.chat-header{
+    height:70px;
+    padding:0 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.chat-header h1{
+    font-size:32px;
+    font-weight:500;
+}
+
+.header-icons{
+    display:flex;
+    gap:22px;
+    font-size:22px;
+    color:#aebac1;
+}
+
+.header-icons i{
+    cursor:pointer;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-box{
+    margin:0 16px;
+    height:48px;
+    background:#202c33;
+    border-radius:24px;
+    display:flex;
+    align-items:center;
+    padding:0 18px;
+    gap:12px;
+}
+
+.search-box i{
+    color:#8696a0;
+    font-size:18px;
+}
+
+.search-box input{
+    flex:1;
+    background:none;
+    border:none;
+    outline:none;
+    color:#fff;
+    font-size:15px;
+}
+
+.search-box input::placeholder{
+    color:#8696a0;
+}
+
+/* ===========================
+   FILTER BUTTONS
+=========================== */
+
+.filters{
+    display:flex;
+    gap:10px;
+    padding:18px 16px;
+}
+
+.filters button{
+    border:none;
+    padding:10px 18px;
+    border-radius:22px;
+    background:#202c33;
+    color:#d1d7db;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.filters button.active{
+    background:#005c4b;
+    color:#00d66b;
+}
+
+.filters .plus{
+    width:42px;
+    height:42px;
+    padding:0;
+    border-radius:50%;
+}
+
+/* ===========================
+   ARCHIVED
+=========================== */
+
+.archived{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:14px 22px;
+    color:#cfd8dc;
+    border-bottom:1px solid #202c33;
+}
+
+.archived i{
+    font-size:20px;
+}
+
+/* ===========================
+   CHAT LIST
+=========================== */
+
+.chat-items{
+    flex:1;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.chat{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px 18px;
+    cursor:pointer;
+    transition:.25s;
+    border-bottom:1px solid #202c33;
+}
+
+.chat{
+
+    transition:.25s;
+
+}
+/* chat hover */
+.chat:hover{
+
+    background:#202c33;
+
+    transform:translateX(4px);
+
+}
+
+.chat.active{
+
+    background:#2a3942;
+
+    border-left:4px solid #00a884;
+
+}
+
+/* Search animation */
+.search-box{
+
+    transition:.3s;
+
+}
+
+.search-box:focus-within{
+
+    background:#2a3942;
+
+}
+/* end */
+
+/* filter button animation start */
+.filters button{
+
+    transition:.25s;
+
+}
+
+.filters button:hover{
+
+    background:#2a3942;
+
+}
+/* filter button animation end 7 */
+.chat img{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.chat-info{
+    flex:1;
+}
+
+.chat-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:6px;
+}
+
+.chat-top h3{
+    font-size:21px;
+    font-weight:500;
+}
+
+.chat-top span{
+    color:#9aa7af;
+    font-size:14px;
+}
+
+.chat-info p{
+    color:#9aa7af;
+    font-size:16px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/* ===========================
+   WINDOWS BANNER
+=========================== */
+
+.windows-banner{
+    height:72px;
+    background:#1f1f1f;
+    border-top:1px solid #313d45;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:14px;
+    color:#25d366;
+    font-size:16px;
+}
+
+.windows-banner i{
+    font-size:34px;
+}
+
+/* ===========================
+   EMPTY CHAT WINDOW
+=========================== */
+
+.chat-window{
+    flex:1;
+    background:#0b141a;
+}
+
+/* ===================================
+   CHAT WINDOW
+=================================== */
+
+.chat-window{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#0b141a;
+
+}
+
+
+/* ===================================
+   CHAT HEADER
+=================================== */
+/* Chrome */
+/* Chat hover beautiful start */
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111b21;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3b4a54;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#54656f;
+
+}
+/* Beautiful Scrollbar end */
+
+
+.conversation-header{
+
+    height:72px;
+
+    background:#202c33;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 22px;
+
+    border-left:1px solid #313d45;
+
+}
+
+.conversation-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.conversation-left img{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.conversation-info h3{
+
+    font-size:18px;
+
+    font-weight:500;
+
+}
+
+.conversation-info p{
+
+    margin-top:4px;
+
+    color:#9aa7af;
+
+    font-size:13px;
+
+}
+
+.conversation-icons{
+
+    display:flex;
+
+    gap:28px;
+
+    font-size:22px;
+
+    color:#aebac1;
+
+}
+
+.conversation-icons i{
+
+    cursor:pointer;
+
+}
+
+
+/* ===================================
+   CHAT BODY
+=================================== */
+
+.conversation-body{
+    flex:1;
+    padding:28px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+    background-image:url("../assets/wallpaper.png");
+    background-size:cover;
+    background-position:center;
+}
+
+
+/* ===================================
+   DATE DIVIDER
+=================================== */
+
+.date-divider{
+
+    align-self:center;
+
+    background:#1f2c34;
+
+    color:#d9d9d9;
+
+    padding:8px 18px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+}
+
+
+/* ===================================
+   MESSAGE
+=================================== */
+
+.message{
+
+    max-width:420px;
+
+    padding:12px 14px;
+
+    border-radius:10px;
+
+    position:relative;
+
+    font-size:15px;
+
+    line-height:1.5;
+
+}
+
+.sender{
+
+    color:#53bdeb;
+
+    display:block;
+
+    font-weight:600;
+
+    margin-bottom:5px;
+
+}
+
+.message p{
+
+    color:#e9edef;
+
+}
+
+.time{
+
+    display:block;
+
+    text-align:right;
+
+    margin-top:8px;
+
+    font-size:11px;
+
+    color:#8696a0;
+
+}
+
+
+/* ===================================
+   INCOMING
+=================================== */
+
+.incoming{
+
+    background:#202c33;
+
+    align-self:flex-start;
+
+}
+
+
+/* ===================================
+   OUTGOING
+=================================== */
+
+.outgoing{
+
+    background:#005c4b;
+
+    align-self:flex-end;
+
+}
+
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.conversation-footer{
+
+    height:72px;
+
+    background:#202c33;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:0 20px;
+
+}
+
+.conversation-footer i{
+
+    color:#aebac1;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+}
+
+.conversation-footer input{
+
+    flex:1;
+
+    height:48px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px;
+
+    background:#2a3942;
+
+    color:white;
+
+    padding:0 18px;
+
+    font-size:15px;
+
+}
+
+.conversation-footer input::placeholder{
+
+    color:#9aa7af;
+
+}
